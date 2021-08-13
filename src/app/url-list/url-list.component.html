@@ -1,0 +1,14 @@
+<div class="list-group bg-steelblue">
+    <li *ngFor="let data of urls" href="http://localhost:8080/{{data.urlId}}" class="list-group-item bg-steelblue white-border" aria-current="true">
+        <div class="w-100 justify-content-between">
+            <h5>{{ data.urlId }}</h5>
+            <small class="url m-2">{{ data.url | slice: 0:200 }}<span *ngIf="data.url.length > 200">.....</span> </small>
+            <span class="pull-right">
+                <i class="fa fa-external-link m-1" aria-hidden="true" data-toggle="tooltip" title="Preview" (click)="openLink(data.urlId)"></i>
+                <i class="fa fa-remove m-1" style="color: red;" data-toggle="tooltip" title="Remove" (click)="delete(data.id)"></i>
+            </span>
+        </div>
+        <hr>
+    </li>
+    <p *ngIf="urls == undefined || urls.length == 0">Shorten your first url..</p>
+</div>

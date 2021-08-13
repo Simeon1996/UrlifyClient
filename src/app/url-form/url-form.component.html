@@ -1,0 +1,8 @@
+<form [formGroup]="formData" #urlForm="ngForm" class="input-group input-group-lg mb-3" (ngSubmit)="onSubmit(formData.value)">
+    <input id="url" required type="text" class="form-control" 
+    [ngClass]="{
+        'red-border': formData.controls['url'].invalid && (formData.controls['url'].dirty || formData.controls['url'].touched),
+        'green-border': formData.controls['url'].valid && (formData.controls['url'].dirty || formData.controls['url'].touched)
+    }" formControlName="url" name="url" placeholder="http(s)://dummy.com..." aria-label="Enter a url.." aria-describedby="url button">      
+    <button class="btn btn-outline-secondary" type="submit" id="submit">Submit</button>
+</form>
