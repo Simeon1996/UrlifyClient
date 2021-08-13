@@ -1,4 +1,4 @@
-# Urlify
+# Urlify (WIP Simple implementation of url shortener service without tests and comments)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
